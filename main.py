@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, send_from_directory, jsonify
 from server import Data
 import os
+import ton
+
+
 
 app = Flask(__name__)
 data = Data()
@@ -48,5 +51,5 @@ def b():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0')
 

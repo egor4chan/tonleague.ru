@@ -1,0 +1,3 @@
+import ton
+
+ton.main()
