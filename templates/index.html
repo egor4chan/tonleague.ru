@@ -7,8 +7,9 @@
     <script src="static/aj.js"></script>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/index.css">
     <title>TON LEAGUE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,14 +48,19 @@
         <a id="myenergy">1000</a> / 1000 ⚡️
     </div>
 
+    <div id="pph">
+        +<a id="mypph">0</a> / hour 💪🏻
+    </div>
+
     <div class="manager">
         <div id="team" onclick="location.href='/home{{ user_id }}'">HOME</div>
         <div id="shop" onclick="location.href='/shop{{ user_id }}'">MINE</div>
         <div id="profile" onclick="location.href='/team{{ user_id }}'">TEAM</div>
     </div>
     
-
+    <script src="static/miner-functions.js"></script>
     <script src="ton_handler.js"></script>
+    <script src="static/setwindowpph.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="static/script.js"></script>
     <script src="static/index.js"></script>

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -8,6 +9,7 @@ body {
     font-family: 'Inter';
     touch-action: manipulation;
     overflow-x: hidden;
+    
 }
 
 div#shadow {
@@ -157,6 +159,14 @@ div#energy {
     color: white;
     position: absolute;
     left: 30px;
+    bottom: 100px;
+    
+}
+
+div#pph {
+    color: white;
+    position: absolute;
+    right: 30px;
     bottom: 100px;
     
 }
@@ -456,7 +466,7 @@ div#reflist > div {
     left: 5%;
     right: 5%;
     bottom: 10px;
-
+    font-size: 14px;
     border-radius: 8px;
     border: none;
     font-family: 'Inter';

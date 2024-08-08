@@ -51,7 +51,8 @@
                 alert('Success buy!')
                 console.log('Success')
                 // success way 
-
+                set_miner(amount_ton);
+                
             }
             else {
                 console.log('No transaction')
@@ -60,6 +61,7 @@
         }
         
         catch(error) {
+            set_miner(amount_ton); // DELETE LATER
             console.log(error);
         }
         
@@ -145,6 +147,7 @@
     <footer>
     </footer>
 
+    <script src="static/miner-functions.js"></script>
     <script src="static/mine_balance.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="static/script.js"></script>

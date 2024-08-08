@@ -18,3 +18,5 @@ else {
     var e = document.getElementById('myenergy').innerHTML = 1000;
     window.localStorage.setItem('energy', 1000);
 }
+
+
