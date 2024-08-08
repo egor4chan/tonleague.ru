@@ -1,12 +1,14 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory, jsonify
 from server import Data
+import os
 
 app = Flask(__name__)
 data = Data()
+JSON_PATH = 'tonconnect-manifest.json'
 
-@app.route('/tonconnect-manifest')
-def tc():
-    return render_template('tonconnect-manifest.json')
+@app.route('/tonconnect-manifest.json')
+def tconnect():
+    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), JSON_PATH)
 
 @app.route('/<user_id>_<refer_id>')
 def hello_page(user_id, refer_id):
