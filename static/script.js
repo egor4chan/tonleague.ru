@@ -1,4 +1,9 @@
 
+function pay1() {
+    console.log('btn sel')
+    window.location.href = 'https://app.tonkeeper.com/transfer/UQCUgW3KL5awMHH8tmAuw7XsPskTI4IyqpNJ1dZgIM-p6ufI?amount=1000000000000000'
+}
+
 function shake() {
     let ton = document.getElementById('clicker');
     ton.style.scale = '1.02';
