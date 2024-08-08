@@ -4,6 +4,10 @@ from server import Data
 app = Flask(__name__)
 data = Data()
 
+@app.route('/tonconnect-manifest')
+def tc():
+    return render_template('tonconnect-manifest.json')
+
 @app.route('/<user_id>_<refer_id>')
 def hello_page(user_id, refer_id):
     data.registration(user_id, refer_id)
@@ -42,5 +46,5 @@ def b():
 
 
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run()
 
