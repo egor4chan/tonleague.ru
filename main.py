@@ -32,6 +32,14 @@ def mine_page(user_id=0):
 def shop_page(user_id=0):
     return render_template('shop.html', user_id=user_id)
 
+@app.route('/uniqe<user_id>')
+def uniqe_page(user_id=0):
+    return render_template('uniqe.html', user_id=user_id)
+
+@app.route('/tap<user_id>')
+def utape_page(user_id=0):
+    return render_template('tap.html', user_id=user_id)
+
 
 @app.route('/team<user_id>')
 def team_page(user_id=0):
@@ -53,5 +61,5 @@ def b():
 
 
 if __name__ == '__main__':
-    app.run(port='8000') # host 0.0.0.0
+    app.run(debug=True, host='0.0.0.0') # host 0.0.0.0
 
