@@ -26,6 +26,11 @@ class Data():
         data = len(data)
         return data
 
+    def get_refferals_ids(self, user_id):
+        data = cursor.execute(f"SELECT user_id FROM users WHERE refer_id = {user_id};").fetchall()
+        
+        return data
+
 
 data = Data()
-data.get_refferals(50000000)
+print(data.get_refferals_ids(50000000))

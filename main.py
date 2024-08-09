@@ -36,7 +36,9 @@ def shop_page(user_id=0):
 @app.route('/team<user_id>')
 def team_page(user_id=0):
     ref_count = data.get_refferals(user_id)
-    return render_template('team.html', user_id=user_id, refs=ref_count)
+    ref_ids = data.get_refferals_ids(user_id)
+
+    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids)
 
 @app.route('/b', methods=['POST'])
 def b():
@@ -51,5 +53,5 @@ def b():
 
 
 if __name__ == '__main__':
-    app.run(port=8000) # host 0.0.0.0
+    app.run(port='8000') # host 0.0.0.0
 

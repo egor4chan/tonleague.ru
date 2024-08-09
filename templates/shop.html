@@ -31,10 +31,9 @@
         }
 
             // Call the function
-        connectToWallet().catch(error => {
-            console.error("Error connecting to wallet:", error);
-        });
-
+            //connectToWallet().catch(error => {
+            //console.error("Error connecting to wallet:", error);
+            //});
         async function create_pay(amount_ton) {
             const transaction = {
             messages: [
@@ -45,7 +44,10 @@
             ]
         }
         try {
-            
+            connectToWallet().catch(error => {
+                console.error("Error connecting to wallet:", error);
+            });
+
             const result = await tonConnectUI.sendTransaction(transaction)
             if (result) {
                 alert('Success buy!')

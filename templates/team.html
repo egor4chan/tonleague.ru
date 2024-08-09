@@ -17,15 +17,17 @@
     <h5 id="r">Invite more friends for updating your balance!</h5>
 
     <div id="reflist">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        
+            {% for id in refid %}
+            <div>
+                <h4 id="id">{{ id[0] }}</h4>
+                <h4 id="earn">0.3023 TON</h4>
+            </div>
+            {% endfor %}
+            
+            
+        
+        
     </div>
 
     <button id="d">Claim rewards (0)</button>

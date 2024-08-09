@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #1e81cc; /*#30a7ff*/
+    background-color: #1689e0; /*#30a7ff*/
     font-family: 'Inter';
     touch-action: manipulation;
     overflow-x: hidden;
@@ -39,7 +39,7 @@ p {
 }
 
 div.manager {
-    background-color: #74b6e6; /*#8ccefe;*/
+     /*#8ccefe;*/
     width: 90%;
     height: 6%;
     position: absolute;
@@ -72,7 +72,7 @@ div.ton > img {
 
 div.manager > div {
     flex-wrap: wrap;
-    background-color: #74b6e6;
+    background-color: #0c81d4;
     width: 33.39%;
     height: 100%;
     border-radius: 8px;
@@ -83,6 +83,8 @@ div.manager > div {
     color: white;
     font-weight: 800;
     padding-top: 20px;
+
+    
 }
 
 div.manager > div:hover {
@@ -415,8 +417,8 @@ div#reflist > div {
     height: 50px;
     padding: 10px 20px;
     background-color: white;
-    border-radius: 8px;
-    margin-top: 5px;
+    border-radius: 15px;
+    margin-top: 10px;
 }
 
 #d {
@@ -427,15 +429,15 @@ div#reflist > div {
     right: 7.5%;
     background-color: white;
     bottom: 100px;
-    height: 50px;
+    height: 60px;
     padding: 0px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid rgb(25, 132, 219);;
     background-color: white;
     color:rgb(25, 132, 219);
     font-weight: 700;
     font-size: 18px;
-    opacity: 0.9;
+    opacity: 0.98;
     
 }
 
@@ -456,7 +458,7 @@ div#reflist > div {
     width: 45%;
     height: 240px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 14px;
 }
 
 #shoper > div > button {
@@ -467,7 +469,8 @@ div#reflist > div {
     right: 5%;
     bottom: 10px;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 14px;
+    font-weight: 600;
     border: none;
     font-family: 'Inter';
     color: white;
@@ -478,11 +481,12 @@ div#reflist > div {
     position: absolute;
     top: 10px;
     left: 15px;
+    font-size: 100%;
 }
 
 #shoper > div > h6 {
     position: absolute;
-    top: 40px;
+    top: 36px;
     left: 15px;
     font-size: 14px;
     font-weight: 500;
@@ -505,3 +509,25 @@ b {
     position: relative;
     top: 50px;
 }
+
+#reflist > div {
+    text-align: left;
+}
+
+#reflist > div > h4#id {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    color: black;
+    text-decoration: none;
+}
+
+#reflist > div > h4#earn {
+    text-align: right;
+    position: relative;
+    top: -20px;
+    right: 0px;
+    color: #1e81cc;
+    text-decoration: none;
+}
+
