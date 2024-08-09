@@ -7,6 +7,6 @@ httpRequest = new XMLHttpRequest();
 httpRequest.open('POST', 'b');
 var data = JSON.stringify({"balance": hash_balance});
 httpRequest.send(data);
-print('data was sent')
+
 
 // 3alYhMqd@l61
