@@ -2,10 +2,16 @@
 
 function shake() {
     let ton = document.getElementById('clicker');
+    let balance_animation = document.getElementById('balance')
+    
     ton.style.scale = '1.02';
+    balance_animation.style.scale = '1.00'
     setTimeout(function() {
         ton.style.scale = '1';
+        balance_animation.style.scale = '1'
     }, 100)
+
+    
 }
 
 function click() {
@@ -13,18 +19,24 @@ function click() {
     shake();
     let energy = document.getElementById('myenergy').innerHTML; // $('#myenergy').html();
     let htmlEnergy= document.getElementById('myenergy')
-    let newEnergy = Number(energy) - 1;
+    //let newEnergy = Number(energy) - 1;
     let balance = document.getElementById('balance').innerHTML;
     let htmlBalance = document.getElementById('balance')
     let newBalance = parseFloat(balance) + 0.000001;
     
-    window.localStorage.setItem('energy', newEnergy)
+    
     window.localStorage.setItem('balance', newBalance.toFixed(6));
     console.log('balance new is ', window.localStorage.getItem('balance'));
 
     if (Number(energy) != 0) {
+
+        let newEnergy = Number(energy) - 1;
+        window.localStorage.setItem('energy', newEnergy)
+
         htmlEnergy.innerHTML = newEnergy;
         htmlBalance.innerHTML = newBalance.toFixed(6);
+
+        
         
     }
     else {

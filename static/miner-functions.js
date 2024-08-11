@@ -1,4 +1,5 @@
-
+//window.localStorage.setItem('balance', 0)
+//window.localStorage.setItem('miner-per-sec', 0)
 
 function set_miner(amount) {
     var totalProfit = amount * 1.3
@@ -6,7 +7,9 @@ function set_miner(amount) {
 
     profitPerSec = profitPerSec.toFixed(6) // округлим до 0.000001
 
-    window.localStorage.setItem('miner-per-sec', profitPerSec)
+    newprofit = Number(profitPerSec) + Number(window.localStorage.getItem('miner-per-sec'))
+
+    window.localStorage.setItem('miner-per-sec', newprofit)
 }
 
 setInterval(() => {

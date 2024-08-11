@@ -35,7 +35,9 @@
             //console.error("Error connecting to wallet:", error);
             //});
         async function create_pay(amount_ton) {
+            
             const transaction = {
+            validUntil: Math.floor(Date.now() / 1000) + 360,
             messages: [
             {
                 address: "UQBLoMfwd9SmfAqOTaNllrWQraT7B-TmmAx4CYinTj7lkghk", // destination address
@@ -107,12 +109,21 @@
             <img src="static/logo2d.PNG" alt="">
         </div>
    </div>
+
+   <div id="bigshoper">
+        <div>
+            <h3>Big Partnership Event</h3>
+            <h6>Profit: <b>25 TON</b></h6>
+            <button onclick="" disabled="true">Earn 10 TON with team</button>
+            <img src="static/coins.WEBP" alt="">
+        </div>
+   </div>
 </center>
 
 
         <div class="manager">
             <div id="team" onclick="location.href='/home{{ user_id }}'">HOME</div>
-            <div id="shop" onclick="location.href='/mine{{ user_id }}'">MINE</div>
+            <div id="shop" onclick="location.href='/shop{{ user_id }}'">MINE</div>
             <div id="profile" onclick="location.href='/team{{ user_id }}'">TEAM</div>
         </div>
     

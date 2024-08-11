@@ -36,6 +36,7 @@ p {
     font-size: 50px;
     position: relative;
     top: 130px;
+    
 }
 
 div.manager {
@@ -549,4 +550,53 @@ div#nav > button {
     border-radius: 12px;
     border: none;
     color: white;
+}
+
+#bigshoper {
+    position: relative;
+    top: 195px;
+    width: 92.6%;
+    height: 320px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+#bigshoper > div > button {
+    position: absolute;
+    width: 94%;
+    height: 50px;
+    left: 3%;
+    right: 3%;
+    bottom: 10px;
+    font-size: 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    border: none;
+    font-family: 'Inter';
+    color: white;
+    background-color:#379eec;
+    opacity: 0.8;
+}
+
+#bigshoper > div > h3 {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 100%;
+}
+
+#bigshoper > div > h6 {
+    position: absolute;
+    top: 36px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#bigshoper > div > img {
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    bottom: 90px;
 }
