@@ -693,3 +693,219 @@ h6#id {
     left: 40px;
     opacity: 0;
 }
+
+#blackscreen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background-color: black;
+    opacity: 0;
+    z-index: 100;
+}
+
+@keyframes black {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes w {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ablack {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes aw {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#withdraw_window {
+    width: 78%;
+    height: 40%;
+
+    position: fixed;
+    top: 30%;
+    left: 11%;
+    right: 11%;
+    background-color: white;
+    z-index: 101;
+    border-radius: 12px;
+    opacity: 0;
+}
+
+#withdraw_window > button {
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    right: 5%;
+
+    width: 90%;
+    height: 50px;
+
+    font-weight: 500;
+    background: linear-gradient(45deg, #3e9af0, #07c5ff);
+    font-family: 'Inter';
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+
+#withdraw_window > h2 {
+    position: absolute;
+    top: 15px;
+    left: 5%;
+    width: 90%;
+
+}
+
+#withdraw_window > h5 {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+#pos_window {
+    width: 78%;
+    height: 50%;
+
+    position: fixed;
+    top: 25%;
+    left: 11%;
+    right: 11%;
+    background-color: white;
+    z-index: 101;
+    border-radius: 17px;
+    opacity: 0;
+}
+
+#pos_window > h2 {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+#pos_window > button {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 600;
+    width: 90%;
+    height: 55px;
+    left: 5%;
+    bottom: 15px;
+    border: none;
+    border-radius: 15px;
+
+    background-color:rgb(52, 166, 241);
+    color: white;
+}
+
+#pos_window > h5 {
+    font-weight: 500;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+#pos_window > h6#left {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+
+    font-size: 14px;
+}
+
+h6#right {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+
+    font-size: 14px;
+}
+
+#pos_window > h6#left2 {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+
+    font-size: 14px;
+}
+
+h6#right2 {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+
+    font-size: 14px;
+}
+
+#pos_window > h6#left3 {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+
+    font-size: 14px;
+}
+
+h6#right3 {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+
+    font-size: 14px;
+}
+
+#pos_window > h6#left4 {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+
+    font-size: 14px;
+}
+
+h6#right4 {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+
+    font-size: 14px;
+}
+
+#pos_window > img {
+    position: absolute;
+    top: 160px;
+    width: 40%;
+    left: 30%
+}
