@@ -28,18 +28,22 @@ else {
     if (Number(energy_html.innerHTML) + Number(seconds_left) >= 1000) { // если сумма жнергии больше или равно 1000
         window.localStorage.setItem('energy', 1000);
         energy_html.innerHTML = '1000'
-        console.log('AAA30 ', Number(energy_html.innerHTML) + Number(seconds_left))
+
         
 
         // test
         if (window.localStorage.getItem('miner-per-sec') != null) {
             if (seconds_left > 30) {
-                clicker.onclick = alert('During the time you were away, your mine earned...');
+                
                 var balanceAfter2 = Number(window.localStorage.getItem('balance')) + (Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left));
 
-                var pasific_earned = Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left) // доход
+                var offline_income = Number(window.localStorage.getItem('total_income')) + (Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left)) // доход + старое значение
+
+                console.log('TI: ', offline_income)
 
                 window.localStorage.setItem('balance', balanceAfter2.toFixed(6));
+                window.localStorage.setItem('total_income', offline_income)
+                clicker.onclick = alert('During the time you were away, your mine earned...');
                 clicker.onclick = click;
             }
             else {

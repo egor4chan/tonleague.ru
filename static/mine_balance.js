@@ -8,4 +8,3 @@ httpRequest.open('POST', 'b');
 var data = JSON.stringify({"balance": hash_balance, "user_id": user_id});
 
 httpRequest.send(data);
-print('data was sent')

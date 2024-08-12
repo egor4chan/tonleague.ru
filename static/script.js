@@ -26,7 +26,6 @@ function click() {
     
     
     window.localStorage.setItem('balance', newBalance.toFixed(6));
-    console.log('balance new is ', window.localStorage.getItem('balance'));
 
     if (Number(energy) != 0) {
 
@@ -57,7 +56,7 @@ function energy_limit() {
         
     }
     else {
-        console.log('energy is full');
+        console.log('')
     }
 }
 
@@ -89,6 +88,4 @@ clicker.addEventListener('click', function (event) {
   
     
     add_clicker_effect(x, y)
-    
-    
 })

@@ -686,3 +686,10 @@ div#nav > button {
     right: 30%;
     bottom: 90px;
 }
+
+h6#id {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    opacity: 0;
+}

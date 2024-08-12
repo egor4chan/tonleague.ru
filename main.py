@@ -45,8 +45,9 @@ def utape_page(user_id=0):
 def team_page(user_id=0):
     ref_count = data.get_refferals(user_id)
     ref_ids = data.get_refferals_ids(user_id)
+    refer_award = data.get_reffer_award(user_id)
 
-    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids)
+    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=refer_award)
 
 @app.route('/b', methods=['POST'])
 def b():
@@ -58,6 +59,17 @@ def b():
         data.update_balance(user_id, balance)
 
         return req
+
+@app.route('/total_income', methods=['POST'])
+def ti():
+    req = request.get_json(force=True, silent=True)
+    print('REQUEST: ', req)
+    user_id = req['user_id']
+    ti = req['ti']
+
+    data.update_ti(user_id, ti)
+    return 'success'
+    
 
 
 if __name__ == '__main__':

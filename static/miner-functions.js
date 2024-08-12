@@ -23,9 +23,9 @@ setInterval(() => {
         let htmlBalance = document.getElementById('balance');
         htmlBalance.innerHTML = balanceAfter.toFixed(6)
 
-        
-        console.log('Balance: ', window.localStorage.getItem('balance'))
-        
+        total_income_MINER_ONLINE = Number(window.localStorage.getItem('total_income')) + Number(miner)
+        window.localStorage.setItem('total_income', total_income_MINER_ONLINE)
+        console.log('TI: ', window.localStorage.getItem('total_income'))
     } 
     // если майнера нет
     else {

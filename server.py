@@ -20,6 +20,10 @@ class Data():
     def update_balance(self, user_id, balance):
         cursor.execute("UPDATE users SET balance = ? WHERE user_id = ?;", (balance, user_id))
         db.commit()
+
+    def update_ti(self, user_id, ti):
+        cursor.execute("UPDATE users SET total_earned = ? WHERE user_id = ?;", (ti, user_id))
+        db.commit()
         
     def get_refferals(self, user_id):
         data = cursor.execute(f"SELECT user_id FROM users WHERE refer_id = {user_id};").fetchall()
@@ -30,7 +34,30 @@ class Data():
         data = cursor.execute(f"SELECT user_id FROM users WHERE refer_id = {user_id};").fetchall()
         
         return data
+    
+    def get_refferals_ti(self, user_id):
+        data = cursor.execute(f"SELECT user_id FROM users WHERE refer_id = {user_id};").fetchall()
+        
+        users_ti = []
+        for user in data:
+            x = user[0]
+            datanew = cursor.execute(f"SELECT total_earned FROM users WHERE user_id = {x};").fetchall()
+    
+            users_ti.append(datanew)
 
+        return users_ti
+
+    def get_reffer_award(self, user_id):
+        data = cursor.execute(f"SELECT user_id FROM users WHERE refer_id = {user_id};").fetchall()
+        
+        res = 0
+        for user in data:
+            x = user[0]
+            datanew = cursor.execute(f"SELECT total_earned FROM users WHERE user_id = {x};").fetchall()
+            res = res + datanew[0][0]
+            res = round(res, 5)
+        return res / 10
+        
 
 data = Data()
-print(data.get_refferals_ids(50000000))
+print(data.get_reffer_award(12))
