@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -73,7 +74,7 @@ div.ton > img {
 
 div.manager > div {
     flex-wrap: wrap;
-    background-color: #0c81d4;
+    background-color: #3e9af0;
     width: 33.39%;
     height: 100%;
     border-radius: 8px;
@@ -334,12 +335,97 @@ div#items > div >img {
 }
 
 #nick {
-    color: white;
+    color: rgb(196, 220, 255);
     position: absolute;
     top: 25px;
-    left: 20px;
+    right: 30px;
     font-size: 16px;
     font-weight: 400;
+    border: 1px solid rgb(137, 182, 250);;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+#user-ico {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#user-ico2 {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 22px;
+    height: 22px;
+}
+
+#profile-btn {
+    position: absolute;
+    top: 25px;
+    height: 40px;
+    left: 8%;
+    width: 30%;
+    background-color: #3e9af0;
+    border-radius: 20px;
+}
+
+#profile-btn > h6 {
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    left: 45px;
+    color: white;
+}
+
+#community-btn {
+    position: absolute;
+    top: 25px;
+    height: 40px;
+    left: 40%;
+    width: 40%;
+    background-color: #3e9af0;
+    border-radius: 20px;
+}
+
+#community-btn > h6 {
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    left: 45px;
+    color: white;
+}
+
+#community-btn > div {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#with-btn {
+    position: absolute;
+    top: 25px;
+    height: 40px;
+    left: 82%;
+    width: 40px;
+    background-color: #3e9af0;
+    border-radius: 20px;
+}
+
+#with-btn > div {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 #counter {
