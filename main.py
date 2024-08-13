@@ -47,7 +47,7 @@ def team_page(user_id=0):
     ref_ids = data.get_refferals_ids(user_id)
     refer_award = data.get_reffer_award(user_id)
 
-    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=refer_award)
+    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5))
 
 @app.route('/b', methods=['POST'])
 def b():
@@ -73,5 +73,5 @@ def ti():
 
 
 if __name__ == '__main__':
-    app.run() # debug=True, host='0.0.0.0'
+    app.run(debug=True, host='0.0.0.0') # debug=True, host='0.0.0.0'
 

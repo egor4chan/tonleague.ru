@@ -57,7 +57,19 @@ class Data():
             res = res + datanew[0][0]
             res = round(res, 5)
         return res / 10
+
+    def set_null_reffer_award(self, user_id):
+        data = cursor.execute(f"SELECT user_id FROM users WHERE refer_id = {user_id};").fetchall()
+        
+        res = 0
+        for user in data:
+            x = user[0]
+            datanew = cursor.execute(f"UPDATE users SET total_earned = 0 WHERE user_id = {x};").fetchall()
+            db.commit()
+            
+            
+        
         
 
 data = Data()
-print(data.get_reffer_award(12))
+#print(data.set_null_reffer_award(12))
