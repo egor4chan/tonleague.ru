@@ -13,18 +13,19 @@
 </head>
 <body>
     <center>
-    <h1 id='l'>You have {{ refs }} refferals!</h1>
-    <h5 id="r">Invite more friends for updating your balance!</h5>
+    <h1 id='l'>Invite your friends to earn more TON!</h1>
+    <h5 id="r">You will receive 10% of your friends profits. Also, if you gather a large team, you can get various rewards in the Mine section.</h5>
+
 
     <div id="reflist">
         
-            {% for id in refid %}
-    
+            {% for i in range(2) %}
+                
             <div>
-                <h4 id="id">{{ id[0] }}</h4>
-                <h4 id="earn">??? TON</h4>
+                <h4 id="id">ID{{ refinfo.get('id')[i][0] }}</h4>
+                <h4 id="earn">{{ refinfo.get('ti')[i][0][0] }} TON</h4>
             </div>
-
+                
             {% endfor %}
             
             

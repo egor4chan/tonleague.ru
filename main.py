@@ -44,10 +44,13 @@ def utape_page(user_id=0):
 @app.route('/team<user_id>')
 def team_page(user_id=0):
     ref_count = data.get_refferals(user_id)
-    ref_ids = data.get_refferals_ids(user_id)
+    ref_ids = data.get_refferals_ids(user_id) # список рефералов id
     refer_award = data.get_reffer_award(user_id)
 
-    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5))
+    ref_info = data.get_refferals_info(user_id)
+    index = 0
+
+    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5), refinfo=ref_info, index=index)
 
 @app.route('/b', methods=['POST'])
 def b():
@@ -73,5 +76,5 @@ def ti():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0') # debug=True, host='0.0.0.0'
+    app.run() # debug=True, host='0.0.0.0'
 

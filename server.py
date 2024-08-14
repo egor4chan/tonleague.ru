@@ -67,9 +67,12 @@ class Data():
             datanew = cursor.execute(f"UPDATE users SET total_earned = 0 WHERE user_id = {x};").fetchall()
             db.commit()
             
-            
+    def get_refferals_info(self, user_id):
+        result = {'id': data.get_refferals_ids(user_id), 'ti': data.get_refferals_ti(user_id)}
+        return result
         
         
 
 data = Data()
-#print(data.set_null_reffer_award(12))
+x = data.get_refferals_info(12)
+print(x)

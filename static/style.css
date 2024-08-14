@@ -50,6 +50,8 @@ div.manager {
     left: 5%;
     display: flex;
     position: fixed;
+
+    
 }
 
 div.ton {
@@ -72,6 +74,7 @@ div.ton > img {
 
 
 
+
 div.manager > div {
     flex-wrap: wrap;
     background-color: #3e9af0;
@@ -85,7 +88,7 @@ div.manager > div {
     color: white;
     font-weight: 800;
     padding-top: 20px;
-
+    border-bottom: 3px solid #1d76c9;;
     
 }
 
@@ -281,8 +284,9 @@ footer {
 #r {
     color: rgb(224, 224, 224);
     position: relative;
-    top: 150px;
+    top: 176px;
     font-weight: 400;
+    width: 86%;
 }
 
 
@@ -370,6 +374,7 @@ div#items > div >img {
     width: 30%;
     background-color: #3e9af0;
     border-radius: 20px;
+    border-bottom: 3px solid #1d76c9;;
 }
 
 #profile-btn > h6 {
@@ -388,6 +393,7 @@ div#items > div >img {
     width: 40%;
     background-color: #3e9af0;
     border-radius: 20px;
+    border-bottom: 3px solid #1d76c9;;
 }
 
 #community-btn > h6 {
@@ -416,6 +422,7 @@ div#items > div >img {
     width: 40px;
     background-color: #3e9af0;
     border-radius: 20px;
+    border-bottom: 3px solid #1d76c9;;
 }
 
 #with-btn > div {
@@ -496,7 +503,7 @@ button#pos-btn {
 
 div#reflist {
     position: relative;
-    top: 200px;
+    top: 210px;
 }
 
 div#reflist > div {
@@ -506,6 +513,7 @@ div#reflist > div {
     background-color: white;
     border-radius: 15px;
     margin-top: 10px;
+    border-bottom: 3px solid rgb(142, 204, 255);;;
 }
 
 #d {
@@ -519,13 +527,13 @@ div#reflist > div {
     height: 60px;
     padding: 0px 20px;
     border-radius: 15px;
-    border: 1px solid rgb(25, 132, 219);;
+    border: 1px solid rgb(113, 186, 247);;
     background-color: white;
     color:rgb(25, 132, 219);
     font-weight: 700;
     font-size: 18px;
     opacity: 0.98;
-    
+    border-bottom: 3px solid rgb(139, 203, 255);;
 }
 
 #shoper {
@@ -544,8 +552,9 @@ div#reflist > div {
     margin: 5px;
     width: 45%;
     height: 240px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 14px;
+    border-bottom: 3px solid #b5dfff;;
 }
 
 #shoper > div > button {
@@ -561,7 +570,8 @@ div#reflist > div {
     border: none;
     font-family: 'Inter';
     color: white;
-    background-color:#379eec
+    background-color:#379eec;
+    border-bottom: 3px solid #1d7cc5;;
 }
 
 #shoper > div > h3 {
