@@ -39,11 +39,11 @@ else {
 
                 var offline_income = Number(window.localStorage.getItem('total_income')) + (Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left)) // доход + старое значение
 
-                console.log('TI: ', offline_income)
+                
 
                 window.localStorage.setItem('balance', balanceAfter2.toFixed(6));
                 window.localStorage.setItem('total_income', offline_income)
-                clicker.onclick = alert('During the time you were away, your mine earned...');
+                clicker.onclick = hello_message(Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left))
                 clicker.onclick = click;
             }
             else {

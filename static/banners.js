@@ -3,8 +3,12 @@
 function delete_banner() {
     var element = document.getElementById('blackscreen')
     var element2 = document.getElementById('withdraw_window')
-    element.remove()
-    element2.remove()
+    element.style.animation = 'ablack 0.4s forwards ease'
+    element2.style.animation = 'aw 0.4s forwards ease'
+    setTimeout(() => {
+        element.remove()
+        element2.remove()
+    }, 400);
 }
 
 function remove_window() {
@@ -20,6 +24,64 @@ function remove_window() {
     }, 400);
 }
 
+function notify(text) {
+    var cloud = document.createElement("div");
+    cloud.setAttribute('id', 'notify')
+    document.body.appendChild(cloud);
+
+    cloud.style.animation = 'notify 0.6s ease forwards'
+
+    var N = document.createElement("h5");
+    N.setAttribute('id', 'notify-N');
+    N.innerHTML = 'NOTIFICATION'
+    cloud.appendChild(N);
+
+    var N = document.createElement("h5");
+    N.setAttribute('id', 'notify-text');
+    N.innerHTML = text
+    cloud.appendChild(N);
+
+
+    setTimeout(function() {
+        cloud.style.animation = 'notifyback 0.6s ease forwards'
+    }, 3000)
+    
+
+
+}
+
+function hello_message(income) {
+    var element = document.createElement("div");
+    document.body.appendChild(element)
+    element.setAttribute('id', 'blackscreen');
+    element.setAttribute('onclick', 'delete_banner()');
+    element.style.animation = 'black 0.4s ease forwards'
+
+    var element2 = document.createElement("div");
+    document.body.appendChild(element2);
+    element2.setAttribute('id', 'withdraw_window');
+    element2.style.animation = 'w 0.4s ease forwards'
+
+    
+
+    var element5 = document.createElement("h2");
+    element5.innerHTML = 'The mine worked hard'
+    element2.appendChild(element5);
+
+    var element4 = document.createElement("h5");
+    element4.setAttribute('id', 'h5');
+    element2.appendChild(element4);
+    element4.innerHTML = 'While you were off the grid, your mine brought you ' + String(income.toFixed(6)) + ' TON.'
+
+    var element3 = document.createElement("button");
+    element3.innerHTML = 'OK'
+    element3.setAttribute('onclick', 'delete_banner()')
+    element3.style.animation = 'w 0.4s ease forwards'
+    element2.appendChild(element3);
+
+    
+} 
+
 function set_banner() {
     var element = document.createElement("div");
     document.body.appendChild(element)
@@ -32,18 +94,35 @@ function set_banner() {
     element2.setAttribute('id', 'withdraw_window');
     element2.style.animation = 'w 0.4s ease forwards'
 
-    var element3 = document.createElement("button");
-    element3.innerHTML = 'Go'
-    element3.style.animation = 'w 0.4s ease forwards'
-    element2.appendChild(element3);
+    
 
     var element5 = document.createElement("h2");
     element5.innerHTML = 'Withdraw'
     element2.appendChild(element5);
 
     var element4 = document.createElement("h5");
-    element4.innerHTML = 'For withdraw you need to have more than 1 TON on your balance.'
+    element4.setAttribute('id', 'h5');
     element2.appendChild(element4);
+    
+    
+    element4.innerHTML = 'We will make the payment within 24 hours. It usually takes no more than 1 hour.'
+    var element3 = document.createElement("button");
+    element3.innerHTML = 'Create'
+    element3.style.animation = 'w 0.4s ease forwards'
+    element2.appendChild(element3);
+
+    var element111 = document.createElement("input");
+    element2.appendChild(element111);
+    element111.setAttribute('id', 'address');
+    element111.setAttribute('placeholder', 'TON-address');
+
+    var element222 = document.createElement("h5");
+    element222.setAttribute('id', 'withdr')
+    element2.appendChild(element222);
+    element222.innerHTML = 'Withdrawable: ' + window.localStorage.getItem('balance') + ' TON'
+    
+    element3.setAttribute('onclick', 'notify("Withdraw will be aviable soon...")')
+    
 }
 
 function banner_1() {

@@ -18,8 +18,8 @@
 
 
     <div id="reflist">
-        {% if APP_SCAN_RESULT|length > 0 %}
-            {% for i in range(0, 2) %}
+        
+            {% for i in range(2) %}
                 
             <div>
                 <h4 id="id">ID{{ refinfo.get('id')[i][0] }}</h4>
@@ -27,8 +27,7 @@
             </div>
                 
             {% endfor %}
-        {% endif %}
-
+            
             
         
         

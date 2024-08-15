@@ -7,6 +7,8 @@
 
 body {
     background-color: #1689e0; /*#30a7ff*/
+    
+
     font-family: 'Inter';
     touch-action: manipulation;
     overflow-x: hidden;
@@ -46,7 +48,7 @@ div.manager {
     height: 6%;
     position: absolute;
     bottom: 40px;
-    border-radius: 8px;
+    border-radius: 5px;
     left: 5%;
     display: flex;
     position: fixed;
@@ -80,7 +82,7 @@ div.manager > div {
     background-color: #3e9af0;
     width: 33.39%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: 0.2s;
     text-align: center;
     justify-content: center;
@@ -92,19 +94,19 @@ div.manager > div {
     
 }
 
-div.manager > div:hover {
-    background-color: #97c8f0;;
+div.manager > div:active  {
+    scale: 1.2;
 }
 
 
 div.manager > div#team {
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 20px 0px 0px 20px;
 }
 div.manager > div#shop {
     border-radius: 0px 0px 0px 0px;
 }
 div.manager > div#profile {
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 div#market-window {
@@ -165,18 +167,55 @@ a.icon {
 div#energy {
     color: white;
     position: absolute;
-    left: 30px;
-    bottom: 100px;
-    
+    left: 22px;
+    bottom: 90px;
+    background-color: #3e9af0;
+    padding: 5px 13px;
+    border-radius: 15px;
+    border-bottom: 3px solid #2d86d8;;
 }
 
 div#pph {
     color: white;
     position: absolute;
-    right: 30px;
-    bottom: 100px;
-    
+    right: 22px;
+    bottom: 90px;
+    background-color: #3e9af0;
+    padding: 5px 13px;
+    border-radius: 15px;
+    border-bottom: 3px solid #2d86d8;;
 }
+
+div#star1 {
+    position: absolute;
+    right: 22px;
+    bottom: 140px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #32a2f1;
+    border-bottom: 3px solid #1571b3;;
+}
+
+div#star {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+   
+}
+
+div#star > img {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 13%;
+    left: 14%;
+}
+
 
 div.profits {
     display: flex;
@@ -758,16 +797,31 @@ h6#id {
 
 #withdraw_window {
     width: 78%;
-    height: 40%;
-
+    height: 50%;
+    color: white;
     position: fixed;
-    top: 30%;
+    top: 25%;
     left: 11%;
     right: 11%;
-    background-color: white;
+    background: linear-gradient(45deg, #1689e0, #53b3fc);
+    border-bottom: 3px solid #126baf;;
     z-index: 101;
     border-radius: 12px;
     opacity: 0;
+}
+
+#address {
+    position: absolute;
+    left: 5%;
+    top: 105px;
+    border: none;
+    background-color: white;
+    border-bottom: 3px solid rgb(145, 211, 255);
+
+    height: 30px;
+    padding: 5px 10px;
+    width: calc(90% - 20px);
+    border-radius: 10px;
 }
 
 #withdraw_window > button {
@@ -780,12 +834,13 @@ h6#id {
     height: 50px;
 
     font-weight: 500;
-    background: linear-gradient(45deg, #3e9af0, #07c5ff);
+    background-color: white;
     font-family: 'Inter';
     font-size: 16px;
-    color: white;
+    color: black;
     border: none;
     border-radius: 12px;
+    border-bottom: 3px solid rgb(192, 230, 255);
 }
 
 #withdraw_window > h2 {
@@ -796,15 +851,23 @@ h6#id {
 
 }
 
-#withdraw_window > h5 {
+#withdraw_window > h5#h5 {
     position: absolute;
     top: 55px;
     left: 5%;
     width: 90%;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
 }
 
+#withdr {
+    position: absolute;
+    bottom: 70px;
+    left: 5%;
+    width: 90%;
+    font-size: 13px;
+    font-weight: 500;
+}
 
 #pos_window {
     width: 78%;
@@ -918,4 +981,55 @@ h6#right4 {
     top: 160px;
     width: 40%;
     left: 30%
+}
+
+b#w {
+    color: white;
+}
+
+#notify {
+    position: absolute;
+    height: 60px;
+    width: calc(90% - 40px);
+    left: 5%;
+    top: -120px;
+    border-radius: 15px;
+    background-color: white;
+    border-bottom: 3px solid rgb(159, 212, 255);
+    padding: 10px 20px;
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+@keyframes notify {
+    from {
+        top: -120px
+    }
+
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes notifyback {
+    from {
+        top: 20px;
+        opacity: 1;
+    }
+
+    to {
+        top: -120px;
+        opacity: 0.5;
+    }
+}
+
+#notify-N {
+    color: rgb(62, 178, 255);
+}
+
+#notify-text {
+    font-size: 18px;
+    position: relative;
+    top: 10px;
 }
