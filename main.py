@@ -43,15 +43,19 @@ def utape_page(user_id=0):
 
 @app.route('/team<user_id>')
 def team_page(user_id=0):
-    ref_count = data.get_refferals(user_id)
-    ref_ids = data.get_refferals_ids(user_id) # список рефералов id
-    refer_award = data.get_reffer_award(user_id)
+    try: 
+        ref_count = int(data.get_refferals(user_id))
+        ref_ids = data.get_refferals_ids(user_id) # список рефералов id
+        refer_award = data.get_reffer_award(user_id)
+        ref_info = data.get_refferals_info(user_id)
+        return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5), refinfo=ref_info)
 
-    ref_info = data.get_refferals_info(user_id)
-    index = 0
-
-    return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5), refinfo=ref_info, index=index)
-
+    except Exception as exc:
+        print(exc)
+        
+        return render_template('team_ref.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5), refinfo=ref_info)
+    
+   
 @app.route('/b', methods=['POST'])
 def b():
         req = request.get_json(force=True, silent=True)

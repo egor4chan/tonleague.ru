@@ -16,20 +16,16 @@
     <h1 id='l'>Invite your friends to earn more TON!</h1>
     <h5 id="r">You will receive 10% of your friends profits. Also, if you gather a large team, you can get various rewards in the Mine section.</h5>
 
-        <label>YOUR LINK. CLICK FOR COPY.</label>
-        <h4 id="link">t.me/tonleague_bot?start={{user_id}}</h4>
 
-    <h3 id="refc">You have {{ refs }} refferals:</h5>
     <div id="reflist">
         
-            {% for i in range(refs) %}
-                
+
             <div>
-                <h4 id="id">ID{{ refinfo.get('id')[i][0] }}</h4>
-                <h4 id="earn">{{ refinfo.get('ti')[i][0][0] }} TON</h4>
+                <h4 id="id"></h4>
+                <h4 id="earn"> TON</h4>
             </div>
                 
-            {% endfor %}
+
             
             
         
@@ -49,6 +45,6 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="static/script.js"></script>
-    <script src="static/reflink.js"></script>
+
 </body>
 </html>
