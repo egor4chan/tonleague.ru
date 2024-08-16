@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/team.css">
     <title>TON LEAGUE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +19,15 @@
 
         <label>YOUR LINK. CLICK FOR COPY.</label>
         <h4 id="link">t.me/tonleague_bot?start=<a id="user_id">{{user_id}}</a></h4>
+        <h4 id="linkw">t.me/tonleague_bot?start={{user_id}}</h4>
 
-    <h3 id="refc">You have {{ refs }} refferals:</h5>
+    <h3 id="refc">Your team ({{ refs }})</h5>
     <div id="reflist">
         
             {% for i in range(refs) %}
                 
             <div>
+                <img src="static/us.png">
                 <h4 id="id">ID{{ refinfo.get('id')[i][0] }}</h4>
                 
             </div>
@@ -39,14 +42,15 @@
     <button id="d">Claim <a id="reward">{{ refaward }}</a> TON</button>
     </center>
 
-    <footer></footer>
+    
     <div class="manager">
         <div id="team" onclick="location.href='/home{{ user_id }}'">HOME</div>
         <div id="shop" onclick="location.href='/shop{{ user_id }}'">MINE</div>
         <div id="profile" onclick="location.href='/team{{ user_id }}'">TEAM</div>
     </div>
 
-
+    
+    <footer></footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="static/script.js"></script>
     <script src="static/reflink.js"></script>

@@ -1,8 +1,9 @@
 document.querySelector('#link').addEventListener(
     'click',
     async (event) => {
-      const code = document.getElementById('link').innerHTML
+      const code = document.getElementById('linkw').innerHTML
       await navigator.clipboard.writeText(code);
-      alert(`${code} copied!`);
+      notify(`Success!`);
+      console.log(code)
     }
   );

@@ -3,6 +3,7 @@
     padding: 0;
     -webkit-user-select: none;
     user-select: none;
+    
 }
 
 body {
@@ -554,7 +555,7 @@ div#reflist > div {
     position: relative;
     left: 5%;
     width: calc(35% - 10px);
-    height: 100px;
+    height: 130px;
     margin-left: 5px;
     margin-right: 5px;
     padding: 10px 20px;
@@ -565,12 +566,22 @@ div#reflist > div {
 }
 
 div#reflist > div > h4 {
-    position: absolute;
+    position: relative;
+    margin-top: 95px;
     background-color: #dff2ff;
     border-bottom: 3px solid rgb(126, 202, 247);
     padding: 5px 10px;
     border-radius: 10px;
     bottom: 10px;
+    font-size: 14px;
+}
+
+div#reflist > div > img {
+    width: 40%;
+    left: 30%;
+    right: 30%;
+    top: 20px;
+    position: absolute;
 }
 
 #refc {
@@ -739,6 +750,7 @@ div#nav > button {
     height: 320px;
     background-color: #ffffff;
     border-radius: 12px;
+    border-bottom: 3px solid #b5dfff;;
 }
 
 #bigshoper > div > button {
@@ -756,6 +768,7 @@ div#nav > button {
     color: white;
     background-color:#379eec;
     opacity: 0.8;
+    border-bottom: 3px solid #1d7cc5;;
 }
 
 #bigshoper > div > h3 {
@@ -855,6 +868,21 @@ h6#id {
     opacity: 0;
 }
 
+#hello_window {
+    width: 78%;
+    height: 30%;
+    color: white;
+    position: fixed;
+    top: 35%;
+    left: 11%;
+    right: 11%;
+    background: linear-gradient(45deg, #1689e0, #53b3fc);
+    border-bottom: 3px solid #126baf;;
+    z-index: 101;
+    border-radius: 12px;
+    opacity: 0;
+}
+
 #address {
     position: absolute;
     left: 5%;
@@ -926,12 +954,14 @@ h6#id {
     z-index: 101;
     border-radius: 17px;
     opacity: 0;
+    border-bottom: 3px solid rgb(160, 202, 230);
 }
 
 #pos_window > h2 {
     position: absolute;
     top: 15px;
     left: 20px;
+    
 }
 
 #pos_window > button {
@@ -948,6 +978,7 @@ h6#id {
 
     background-color:rgb(52, 166, 241);
     color: white;
+    border-bottom: 3px solid rgb(30, 126, 190);
 }
 
 #pos_window > h5 {
@@ -971,6 +1002,10 @@ h6#right {
     right: 20px;
 
     font-size: 14px;
+}
+
+#pos_window > h6 {
+    margin: 10px;
 }
 
 #pos_window > h6#left2 {

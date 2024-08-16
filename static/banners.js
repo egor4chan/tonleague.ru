@@ -24,7 +24,7 @@ function remove_window() {
     }, 400);
 }
 
-function notify(text) {
+function notify(text, node) {
     var cloud = document.createElement("div");
     cloud.setAttribute('id', 'notify')
     document.body.appendChild(cloud);
@@ -46,7 +46,9 @@ function notify(text) {
         cloud.style.animation = 'notifyback 0.6s ease forwards'
     }, 3000)
     
-
+    if (node == 1) {
+        delete_banner()
+    }
 
 }
 
@@ -121,7 +123,7 @@ function set_banner() {
     element2.appendChild(element222);
     element222.innerHTML = 'Withdrawable: ' + window.localStorage.getItem('balance') + ' TON'
     
-    element3.setAttribute('onclick', 'notify("Withdraw will be aviable soon...")')
+    element3.setAttribute('onclick', 'notify("You need to have >0.01 TON", 1)')
     
 }
 
