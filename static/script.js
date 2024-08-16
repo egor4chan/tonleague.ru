@@ -74,6 +74,7 @@ function add_clicker_effect(x, y) {
     el.style.position = 'absolute';
     el.style.userSelect = 'none';
     el.style.webkitUserSelect = 'none';
+    
     el.style.top = `${y}px`
     el.style.left = `${x}px`
     document.body.appendChild(el)

@@ -5,3 +5,8 @@ var hash_user_id = window.localStorage.setItem('user_id', user_id);
 var hash_refer_id = window.localStorage.setItem('refer_id', refer_id);
 
 
+
+setTimeout(() => {
+    window.location.href = `/home${user_id}`
+}, 1000)
+

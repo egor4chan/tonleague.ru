@@ -478,7 +478,7 @@ div#items > div >img {
 #counter {
     font-size: 32px;
     color: white;
-    animation: countup forwards 3.3s ease;
+    animation: countup forwards 4.3s ease;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -491,7 +491,7 @@ div#items > div >img {
         scale: 1.5;
     }
     30% {
-        opacity: 0.9;
+        opacity: 0.1;
     }
     50% {
         top: -400px;
