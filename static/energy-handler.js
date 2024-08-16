@@ -43,6 +43,16 @@ else {
 
                 window.localStorage.setItem('balance', balanceAfter2.toFixed(6));
                 window.localStorage.setItem('total_income', offline_income)
+
+                // new 
+
+                httpRequest = new XMLHttpRequest();
+                httpRequest.open('POST', 'set_reward');
+                var data = JSON.stringify({"reward": Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left), "user_id": document.getElementById('id').innerHTML});
+                httpRequest.send(data);
+                
+                // endnew
+
                 clicker.onclick = hello_message(Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left))
                 clicker.onclick = click;
             }

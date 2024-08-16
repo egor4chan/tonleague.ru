@@ -17,7 +17,7 @@
     <h5 id="r">You will receive 10% of your friends profits. Also, if you gather a large team, you can get various rewards in the Mine section.</h5>
 
         <label>YOUR LINK. CLICK FOR COPY.</label>
-        <h4 id="link">t.me/tonleague_bot?start={{user_id}}</h4>
+        <h4 id="link">t.me/tonleague_bot?start=<a id="user_id">{{user_id}}</a></h4>
 
     <h3 id="refc">You have {{ refs }} refferals:</h5>
     <div id="reflist">
@@ -26,7 +26,7 @@
                 
             <div>
                 <h4 id="id">ID{{ refinfo.get('id')[i][0] }}</h4>
-                <h4 id="earn">{{ refinfo.get('ti')[i][0][0] }} TON</h4>
+                
             </div>
                 
             {% endfor %}
@@ -36,7 +36,7 @@
         
     </div>
 
-    <button id="d" onclick="alert('Soon...')">Claim {{ refaward }} TON</button>
+    <button id="d">Claim <a id="reward">{{ refaward }}</a> TON</button>
     </center>
 
     <footer></footer>
@@ -50,5 +50,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="static/script.js"></script>
     <script src="static/reflink.js"></script>
+    <script src="static/banners.js"></script>
+    <script src="static/claim.js"></script>
 </body>
 </html>

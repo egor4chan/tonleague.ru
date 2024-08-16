@@ -46,9 +46,11 @@ def team_page(user_id=0):
     try: 
         ref_count = int(data.get_refferals(user_id))
         ref_ids = data.get_refferals_ids(user_id) # список рефералов id
-        refer_award = data.get_reffer_award(user_id)
         ref_info = data.get_refferals_info(user_id)
-        return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 5), refinfo=ref_info)
+
+        refer_award = float(data.get_reward(user_id) / 10)
+
+        return render_template('team.html', user_id=user_id, refs=ref_count, refid=ref_ids, refaward=round(refer_award, 6), refinfo=ref_info)
 
     except Exception as exc:
         print(exc)
@@ -77,6 +79,38 @@ def ti():
     data.update_ti(user_id, ti)
     return 'success'
     
+    
+@app.route('/set_reward', methods=['POST'])
+def set_reward():
+    req = request.get_json(force=True, silent=True)
+    print('REQUEST: ', req)
+
+    user_id = req['user_id']
+    reward = req['reward']
+
+    print(user_id, reward)
+
+    data.set_users_refer_reward(user_id, reward)
+    return 'success'
+    
+
+@app.route('/clean_reward', methods=['POST'])
+def clean_reward():
+    req = request.get_json(force=True, silent=True)
+    print('REQUEST: ', req)
+
+    user_id = req['user_id']
+    reward = req['reward']
+
+    print(user_id)
+
+    data.clean_reward_user(user_id)
+    
+    user_balance = data.get_balance(user_id)
+    data.update_balance(user_id, float(user_balance) + float(reward))
+
+
+    return 'success'
 
 
 if __name__ == '__main__':

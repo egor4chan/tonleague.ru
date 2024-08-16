@@ -542,7 +542,35 @@ button#pos-btn {
 
 div#reflist {
     position: relative;
-    top: 250px;
+    top: 260px;
+    
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#reflist > div {
+    text-align: center;
+    position: relative;
+    left: 5%;
+    width: calc(35% - 10px);
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    border-bottom: 3px solid rgb(142, 204, 255);;;
+}
+
+div#reflist > div > h4 {
+    position: absolute;
+    background-color: #dff2ff;
+    border-bottom: 3px solid rgb(126, 202, 247);
+    padding: 5px 10px;
+    border-radius: 10px;
+    bottom: 10px;
 }
 
 #refc {
@@ -570,15 +598,7 @@ label {
     width: 86%;
 }
 
-div#reflist > div {
-    width: 80%;
-    height: 50px;
-    padding: 10px 20px;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 10px;
-    border-bottom: 3px solid rgb(142, 204, 255);;;
-}
+
 
 #d {
     

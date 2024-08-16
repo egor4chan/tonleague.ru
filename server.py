@@ -17,6 +17,10 @@ class Data():
         except: 
             print('uniqe')
 
+    def get_balance(self, user_id):
+        data = cursor.execute(f"SELECT balance FROM users WHERE user_id = {user_id}").fetchall()
+        return float(data[0][0])
+
     def update_balance(self, user_id, balance):
         cursor.execute("UPDATE users SET balance = ? WHERE user_id = ?;", (balance, user_id))
         db.commit()
@@ -71,8 +75,30 @@ class Data():
         result = {'id': data.get_refferals_ids(user_id), 'ti': data.get_refferals_ti(user_id)}
         return result
         
-        
+    def get_reward(self, user_id):
+        data = cursor.execute(f"SELECT reward FROM users WHERE user_id = {user_id};").fetchall()
+        return data[0][0]
+
+    def get_refer_id(self, user_id):
+        data = cursor.execute(f"SELECT refer_id FROM users WHERE user_id = {user_id};").fetchall()
+        return data[0][0]
+
+    def set_users_refer_reward(self, user_id, reward): # по заходу на index.html выполнить эту функцию /// увеличивает reward рефера зашедшего юзера
+        refer_id = data.get_refer_id(user_id)
+
+        if refer_id == 0:
+            pass
+        else:
+            refer_reward_now = data.get_reward(refer_id)
+            refer_reward_after = round(float(refer_reward_now) + float(reward), 6)
+
+            responce = cursor.execute(f"UPDATE users SET reward = {refer_reward_after} WHERE user_id = {refer_id};").fetchall()
+            db.commit()
+
+    def clean_reward_user(self, user_id):
+        data = cursor.execute(f"UPDATE users SET reward = 0 WHERE user_id = {user_id};").fetchall()
+        db.commit()
 
 data = Data()
-x = data.get_refferals_info(12)
+x = data.get_balance(50000000)
 print(x)
