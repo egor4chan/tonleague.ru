@@ -3,6 +3,7 @@
 var energy_html = document.getElementById('myenergy')
 var seconds_left
 
+
 if (window.localStorage.getItem('offlineTime') == null) {
     console.log('EVENT ENERGY-HANDLER // 6')
 }
@@ -10,6 +11,7 @@ else {
     seconds_left = Math.floor((Date.now() - window.localStorage.getItem('offlineTime')) / 1000);
     console.log('EVENT ENERGY-HANDLER // 10')
     console.log(seconds_left)
+
 }
 
 setInterval(() => {
@@ -20,7 +22,7 @@ setInterval(() => {
 
 // seconds_left - время в сек. сколько нас не было в сети
 
-if (Number(seconds_left) < 1) {
+if (Number(seconds_left) < 10) {
     console.log('EVENT ENERGY-HANDLER // 23')
 }
 
@@ -33,7 +35,7 @@ else {
 
         // test
         if (window.localStorage.getItem('miner-per-sec') != null) {
-            if (seconds_left > 3) {
+            if (seconds_left > 30) {
                 
                 var balanceAfter2 = Number(window.localStorage.getItem('balance')) + (Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left));
 
