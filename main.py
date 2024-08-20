@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_from_directory, jsonify
 from server import Data
 import os
-
+import requests
 
 app = Flask(__name__)
 data = Data()
@@ -114,5 +114,5 @@ def clean_reward():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0') # debug=True, host='0.0.0.0'
+    app.run() # debug=True, host='0.0.0.0'
 
