@@ -30,7 +30,7 @@ def tconnect():
 @app.route('/<user_id>_<refer_id>')
 def hello_page(user_id, refer_id):
     data.registration(user_id, refer_id)
-    send_telegram(f'{user_id} was joined...')
+    #send_telegram(f'{user_id} was joined...')
     return render_template('hello.html', user_id=user_id, refer_id=refer_id)
 
 
@@ -128,7 +128,18 @@ def clean_reward():
 
     return 'success'
 
+@app.route('/withdraw', methods=['POST'])
+def withdraws():
+    req = request.get_json(force=True, silent=True)
+    print('REQUEST: ', req)
+
+    
+    a = req['a']
+    count = req['c']
+
+    send_telegram(f'Withdraw!\n\nAddress: {a}\nCount: {count} TON')
+    return 'success'
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0') # debug=True, host='0.0.0.0'
+    app.run() # debug=True, host='0.0.0.0'
 
