@@ -855,7 +855,7 @@ h6#id {
 
 #withdraw_window {
     width: 78%;
-    height: 40%;
+    height: 35%;
     color: white;
     position: fixed;
     top: 25%;
@@ -870,7 +870,7 @@ h6#id {
 
 #hello_window {
     width: 78%;
-    height: 35%;
+    height: 40%;
     color: white;
     position: fixed;
     top: 35%;
