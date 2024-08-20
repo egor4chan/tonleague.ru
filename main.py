@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory, jsonify
 from server import Data
 import os
-import requests
-
 
 
 app = Flask(__name__)
