@@ -1,4 +1,15 @@
-
+function withdraw(count) {
+    address = document.getElementById('address').value;
+    httpRequest = new XMLHttpRequest();
+    httpRequest.open('POST', 'withdraw');
+    var data = JSON.stringify({
+        'c': String(count),
+        'a': address
+    });
+    httpRequest.send(data);
+    window.localStorage.setItem('balance', 0)
+    notify('Success!', 1)
+}
 
 function delete_banner() {
     var element = document.getElementById('blackscreen')
@@ -128,7 +139,18 @@ function set_banner() {
     element2.appendChild(element222);
     element222.innerHTML = 'Withdrawable: ' + window.localStorage.getItem('balance') + ' TON'
     
-    element3.setAttribute('onclick', 'notify("You need to have >0.01 TON", 1)')
+    if (Number(window.localStorage.getItem('balance')) < 0.1) {
+        element3.setAttribute('onclick', 'notify("You need to have >0.01 TON", 1)')
+    }
+    else {
+        
+        var count = window.localStorage.getItem('balance')
+        
+        var f = `withdraw(${count})`
+
+        element3.setAttribute('onclick', f)
+    }
+    
     
 }
 
