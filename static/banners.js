@@ -75,6 +75,11 @@ function hello_message(income) {
     element2.appendChild(element4);
     element4.innerHTML = 'While you were off the grid, your mine brought you ' + String(income.toFixed(6)) + ' TON.'
 
+    var element31 = document.createElement("img");
+    element31.setAttribute('id', 'gif');
+    element31.setAttribute('src', 'static/gif.gif');
+    element2.appendChild(element31);
+
     var element3 = document.createElement("button");
     element3.innerHTML = 'OK'
     element3.setAttribute('onclick', 'delete_banner()')
@@ -205,7 +210,7 @@ function banner_1() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/gas.PNG');
+    imga.setAttribute('src', 'static/gas.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -288,7 +293,7 @@ function banner_2() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/coder.PNG');
+    imga.setAttribute('src', 'static/admin.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -371,7 +376,7 @@ function banner_3() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/solider.PNG');
+    imga.setAttribute('src', 'static/solider.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -454,7 +459,7 @@ function banner_4() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/farmer.PNG');
+    imga.setAttribute('src', 'static/straw.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -473,7 +478,7 @@ function banner_5() {
 
     var element3 = document.createElement("h2");
     element2.appendChild(element3);
-    element3.innerHTML = 'Hashrate Hero'; //                               NAME
+    element3.innerHTML = 'Whales Club'; //                               NAME
     element3.style.animation = 'w 0.4s ease forwards'
 
     var element4 = document.createElement("button");
@@ -537,7 +542,7 @@ function banner_5() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/hero.PNG');
+    imga.setAttribute('src', 'static/whale.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -620,7 +625,7 @@ function banner_6() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/analytics.PNG');
+    imga.setAttribute('src', 'static/anal.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -703,7 +708,7 @@ function banner_7() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/box.PNG');
+    imga.setAttribute('src', 'static/babki.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }
@@ -786,7 +791,7 @@ function banner_8() {
 
     var imga = document.createElement("img");
     element2.appendChild(imga);
-    imga.setAttribute('src', 'static/news.PNG');
+    imga.setAttribute('src', 'static/brain.gif');
     imga.style.animation = 'w 0.4s ease forwards'
 
 }

@@ -33,7 +33,7 @@ else {
 
         // test
         if (window.localStorage.getItem('miner-per-sec') != null) {
-            if (seconds_left > 30) {
+            if (seconds_left > 3) {
                 
                 var balanceAfter2 = Number(window.localStorage.getItem('balance')) + (Number(window.localStorage.getItem('miner-per-sec')) * Number(seconds_left));
 
