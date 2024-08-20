@@ -86,10 +86,7 @@ function hello_message(income) {
     element2.appendChild(element4);
     element4.innerHTML = 'While you were off the grid, your mine brought you ' + String(income.toFixed(6)) + ' TON.'
 
-    var element31 = document.createElement("img");
-    element31.setAttribute('id', 'gif');
-    element31.setAttribute('src', 'static/gif.gif');
-    element2.appendChild(element31);
+
 
     var element3 = document.createElement("button");
     element3.innerHTML = 'OK'
