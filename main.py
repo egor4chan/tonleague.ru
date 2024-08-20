@@ -3,8 +3,6 @@ from server import Data
 import os
 
 
-
-
 app = Flask(__name__)
 data = Data()
 JSON_PATH = 'tonconnect-manifest.json'
@@ -114,5 +112,5 @@ def clean_reward():
 
 
 if __name__ == '__main__':
-    app.run() # debug=True, host='0.0.0.0'
+    app.run(port=5000) # debug=True, host='0.0.0.0'
 
