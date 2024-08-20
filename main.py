@@ -2,7 +2,22 @@ from flask import Flask, render_template, request, send_from_directory, jsonify
 from server import Data
 import os
 
+import requests
 
+def send_telegram(text: str):
+    token = "7388243533:AAEMH7wpms_kGeESPP217LWqE3txFu1qfQQ"
+    url = "https://api.telegram.org/bot"
+    channel_id = "@tonleague_withdraws"
+    url += token
+    method = url + "/sendMessage"
+
+    r = requests.post(method, data={
+         "chat_id": channel_id,
+         "text": text
+          })
+
+    if r.status_code != 200:
+        raise Exception("post_text error")
 
 
 app = Flask(__name__)
@@ -21,6 +36,7 @@ def hello_page(user_id, refer_id):
 
 @app.route('/home<user_id>')
 def index_page(user_id=0):
+    send_telegram('s')
     return render_template('index.html', user_id=user_id)
 
 
@@ -114,5 +130,5 @@ def clean_reward():
 
 
 if __name__ == '__main__':
-    app.run() # debug=True, host='0.0.0.0'
+    app.run(debug=True, host='0.0.0.0') # debug=True, host='0.0.0.0'
 
