@@ -23,8 +23,8 @@ function click() {
     let balance = document.getElementById('balance').innerHTML;
     let htmlBalance = document.getElementById('balance')
     let newBalance = parseFloat(balance) + 0.000001;
-    
-    
+    var WebApp = window.Telegram.WebApp;
+    WebApp.HapticFeedback.impactOccurred('light')
     window.localStorage.setItem('balance', newBalance.toFixed(6));
 
     if (Number(energy) != 0) {
